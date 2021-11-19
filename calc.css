@@ -1,0 +1,90 @@
+*{
+	box-sizing:border-box;
+}
+body
+{
+	margin: 0;
+	padding: 0;
+}
+input[type="button"]
+{
+	width:50px;
+	height:50px;
+	font-size:20;
+	margin:2px;
+	border:none;
+	border-radius:5px;
+	background-color: #127aad;
+	color:white;
+}
+input[type="button"]:hover
+{
+	background-color: #349ed2;
+	cursor:pointer;
+
+}
+input[type="button"]:focus
+{
+	outline:none;
+}
+input[type="text"]
+{
+	width:220px;
+	height:50px;
+	margin:5px 2px;
+	padding: 5px 15px;
+	font-size:25;
+	background-color:rgba(255, 255, 255, 0.705);
+	color:rgb(0, 0, 0);
+	border:none;
+	overflow: hidden;
+}
+input[type="text"]:focus
+{
+ outline:none;
+}
+.main
+{
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	background-color: rgba(65, 62, 62, 0.555);
+	padding:10px 15px;
+	border:none;
+	border-radius:15px;
+	box-shadow: 0 8px 16px 5px rgba(0,0,0,0.5);
+}
+.bg
+{
+	height: 100%;
+	background: linear-gradient(to right,rgb(247, 59, 59),rgb(101, 101, 240));
+}
+.bg h1 {
+	color:rgba(255, 255, 255, 0.863);
+	padding:20px;
+	text-shadow: 0 8px 16px rgba(0,0,0,1);
+	font-family: cursive;
+}
+table .imp
+{
+  background-color: #349ed2;
+}
+table .imp:hover
+{
+  background-color: #19aff1;
+}
+.insta
+{
+position: fixed;	
+bottom: 30px;
+right: 30px;
+font-family: cursive;
+font-weight: bold;
+}
+.insta a{
+	text-decoration:none;
+	color:blue;
+	font-family: cursive;
+	cursor:pointer;
+}

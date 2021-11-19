@@ -1,0 +1,93 @@
+<html>
+<head>
+<link rel="stylesheet" href="css/calc.css">
+<script>
+function ins(ar)
+{
+document.cal.txt.value+=ar;
+}
+function bk()
+{
+var exp = document.cal.txt.value;
+document.cal.txt.value = exp.substring(0,exp.length-1);
+}
+function per(ar)
+{
+ var p=1/100;
+ document.cal.txt.value=ar*p;
+}
+function ft(number)
+{
+    var t=Error;
+    if(number < 0)
+    {
+        document.cal.txt.value=t;
+    }
+    else if(number == 0)
+    {
+        document.cal.txt.value=t;
+    }
+    else
+    {
+        var fact = 1;
+        for(i=1; i<=number; i++)
+        {
+            fact *=i;
+        }
+    }
+    document.cal.txt.value=fact;
+}
+</script>
+<style>
+</style>
+</head>
+<body>
+<div class="bg"><h1 align="center">SIMPLE CALCULATOR</h1></div>
+<div class="main">
+<form name="cal" class="calc">
+<table>
+<tr><td colspan="4"><input type="text" name="txt"></td></tr>
+<tr>
+<td colspan="2"><input class="imp" style="font-size:15; width: 105px;" type="button" value="Back" onclick="bk();"></td>
+<td colspan="2"><input class="imp" style="width: 105px;background-color: #ff4949;" type="button" value="Ac" onclick="txt.value='';"></td>
+</tr>
+<tr>
+    <td><input class="imp" type="button" value="%" onclick="per(txt.value)"></td>
+    <td><input class="imp" type="button" value="n!" onclick="ft(txt.value);"></td>
+    <td><input class="imp" type="button" value="&radic;" onclick="txt.value=Math.sqrt(txt.value);"></td>
+    <td><input class="imp" type="button" value="x" onclick="ins('*');"></td>
+</tr>
+<tr>
+    <td><input type="button" value="7" onclick="ins('7');"></td>
+    <td><input type="button" value="8" onclick="ins('8');"></td>
+    <td><input type="button" value="9" onclick="ins('9');"></td>
+    <td><input class="imp" type="button" value="-" onclick="ins('-');"></td>
+</tr>
+<tr>
+    <td><input type="button" value="4" onclick="ins('4');"></td>
+    <td><input type="button" value="5" onclick="ins('5');"></td>
+    <td><input type="button" value="6" onclick="ins('6');"></td>
+    <td><input class="imp" type="button" value="+" onclick="ins('+');"></td>
+</tr>
+
+<tr>
+    <td><input type="button" value="1" onclick="ins('1');"></td>
+    <td><input type="button" value="2" onclick="ins('2');"></td>
+    <td><input type="button" value="3" onclick="ins('3');"></td>
+    <td rowspan=5><input style="height:105px; background-color: rgb(4, 194, 4);" type="button" value="=" onclick="txt.value=eval(txt.value);">
+    </td>
+</tr>
+
+<tr>
+    <td><input type="button" value="00" onclick="ins('00');"></td>
+    <td><input type="button" value="0" onclick="ins('0');"></td>
+    <td><input type="button" value="." onclick="ins('.');"></td>
+</tr>
+</table>
+</form>
+</div>
+ <div class="insta">&copy;
+    Designed by <a onclick="alert('Thank you for Using My Calculator :)\n Have a nice Day!😎');">Naveen Kumar.</a> :)
+  </div>
+</body>
+</html>
